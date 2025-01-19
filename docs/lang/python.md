@@ -4,55 +4,31 @@ Python 是一门已在世界上广泛使用的解释型语言。它提供了高�
 
 ### Python 的优点
 
-- Python 是一门 **解释型** 语言：Python 不需要编译和链接，可以在一定程度上减少操作步骤。
-- Python 是一门 **交互式** 语言：Python 解释器实现了交互式操作，可以直接在终端输入并执行指令。
-- Python **易学易用**：Python 提供了大量的数据结构，也支持开发大型程序。
-- Python **兼容性强**：Python 同时支持 Windows、macOS 和 Unix 操作系统。
-- Python **实用性强**：从简单的输入输出到科学计算甚至于大型 WEB 应用，都可以写出适合的 Python 程序。
-- Python **程序简洁、易读**：Python 代码通常比实现同种功能的其他语言的代码短。
-- Python **支持拓展**：Python 会开发 C 语言程序（即 CPython），支持把 Python 解释器和用 C 语言开发的应用链接，用 Python 扩展和控制该应用。
+-   Python 是一门 **解释型** 语言：Python 不需要编译和链接，可以在一定程度上减少操作步骤。
+-   Python 是一门 **交互式** 语言：Python 解释器实现了交互式操作，可以直接在终端输入并执行指令。
+-   Python **易学易用**：Python 提供了大量的数据结构，也支持开发大型程序。
+-   Python **兼容性强**：Python 同时支持 Windows、macOS 和 Unix 操作系统。
+-   Python **实用性强**：从简单的输入输出到科学计算甚至于大型 WEB 应用，都可以写出适合的 Python 程序。
+-   Python **程序简洁、易读**：Python 代码通常比实现同种功能的其他语言的代码短。
+-   Python **支持拓展**：Python 会开发 C 语言程序（即 CPython），支持把 Python 解释器和用 C 语言开发的应用链接，用 Python 扩展和控制该应用。
 
 ### 学习 Python 的注意事项
 
-- 目前主要使用的 Python 版本是 Python 3.7 及以上的版本，Python 2 和 Python 3.6 及以前的 Python 3 已经 [不被支持](https://devguide.python.org/versions/#unsupported-versions)，但仍被一些老旧系统与代码所使用。本文将 **介绍较新版本的 Python**。如果遇到 Python 2 代码，可以尝试 [`2to3`](https://docs.python.org/zh-cn/3/library/2to3.html) 程序将 Python 2 代码转换为 Python 3 代码。
-- Python 的设计理念和语法结构 **与一些其他语言的差异较大**，隐藏了许多底层细节，所以呈现出实用而优雅的风格。
-- Python 是高度动态的解释型语言，因此其 **程序运行速度相对较慢**，尤其在使用其内置的 `for` 循环语句时。在使用 Python 时，应尽量使用 `filter`、`map` 等内置函数，或使用 [列表生成](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python) 语法的手段来提高程序性能。
+-   目前主要使用的 Python 版本是 Python 3.7 及以上的版本，Python 2 和 Python 3.6 及以前的 Python 3 已经 [不被支持](https://devguide.python.org/versions/#unsupported-versions)，但仍被一些老旧系统与代码所使用。本文将 **介绍较新版本的 Python**。如果遇到 Python 2 代码，可以尝试 [`2to3`](https://docs.python.org/zh-cn/3/library/2to3.html) 程序将 Python 2 代码转换为 Python 3 代码。
+-   Python 的设计理念和语法结构 **与一些其他语言的差异较大**，隐藏了许多底层细节，所以呈现出实用而优雅的风格。
+-   Python 是高度动态的解释型语言，因此其 **程序运行速度相对较慢**，尤其在使用其内置的 `for` 循环语句时。在使用 Python 时，应尽量使用 `filter`、`map` 等内置函数，或使用 [列表生成](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python) 语法的手段来提高程序性能。
 
 ## 环境搭建
 
-### Windows
+参见 [Python 3](../tools/compiler.md#python-3)。或者：
 
-访问 <https://www.python.org/downloads/> 下载自己需要的版本并安装。
-为了方便，请务必勾选复选框 `Add Python 3.x to PATH` 以将 Python 加入环境变量。
+-   Windows：也可以在 Microsoft Store 中免费而快捷地获取 Python。
+-   macOS/Linux：通常情况下，大部分的 Linux 发行版中已经自带了 Python。如果只打算学习 Python 语法，并无其它开发需求，不必另外安装 Python。
 
-如下图，在 Python 3.7.4 版本的安装界面中，应勾选最后一项复选框。
+    ???+ warning "注意"
+        在一些默认安装（指使用软件包管理器安装）Python 的系统（如 Unix 系统）中，应在终端中运行 `python3` 打开 Python 3 解释器。[^ref1]
 
-![](./images/python1.png)
-
-安装完成后，可以在开始菜单找到安装好的 Python。
-
-![](./images/python2.png)
-
-此外，可以在命令提示符中运行 Python。
-
-正常启动 Python 解释器后，它会先显示欢迎信息等内容，之后就会出现提示符 `>>>`，大致如下所示：
-
-```pycon
-Python 3.10.1 (tags/v3.10.1:2cd268a, Dec  6 2021, 19:10:37) [MSC v.1929 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
->>>
-```
-
-此外，也可以在 Microsoft Store 中免费而快捷地获取 Python。
-
-### macOS/Linux
-
-通常情况下，大部分的 Linux 发行版中已经自带了 Python。如果只打算学习 Python 语法，并无其它开发需求，不必另外安装 Python。
-
-???+warning "注意"
-    在一些默认安装（指使用软件包管理器安装）Python 的系统（如 Unix 系统）中，应在终端中运行 `python3` 打开 Python 3 解释器。[^ref1]
-
-如果发行版自带 Python 版本过旧，可自行下载编译最新版本的 Python。此外，也可以通过 venv、conda、Nix 等工具管理 Python 工具链和 Python 软件包，创建隔离的虚拟环境，避免出现依赖问题。
+此外，也可以通过 venv、conda、Nix 等工具管理 Python 工具链和 Python 软件包，创建隔离的虚拟环境，避免出现依赖问题。
 
 作为一种解释型语言，Python 的执行方式和 C++ 有所不同，这种差异在使用 IDE 编程时往往得不到体现，因此这里需要强调一下运行程序的不同方式。
 
@@ -68,7 +44,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 Python 的生命力很大程度上来自于丰富的第三方库，编写一些实用程序时「调库」是常规操作，`pip` 是首选的安装第三方库的程序。自 Python 3.4 版本起，它被默认包含在 Python 二进制安装程序中。
 
-`pip` 中的第三方库主要存储在 [Python 包索引（PyPI）](https://pypi.org/) 上，用户也可以指定其它第三方库的托管平台。使用方法可参照 [pypi 镜像使用帮助 - 清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)、[PyPI 镜像源使用帮助—中国科学技术大学镜像站](http://mirrors.ustc.edu.cn/help/pypi.html) 等使用帮助。你可以在 [MirrorZ](https://mirrorz.org/list/pypi) 上获取更多 PyPI 镜像源。
+`pip` 中的第三方库主要存储在 [Python 包索引（PyPI）](https://pypi.org/) 上，用户也可以指定其它第三方库的托管平台。使用方法可参照 [pypi 镜像使用帮助 - 清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/) 等使用帮助。你可以在 [MirrorZ](https://mirrorz.org/list/pypi) 上获取更多 PyPI 镜像源。
 
 ## 基本语法
 
@@ -82,9 +58,9 @@ Python 的语法简洁而易懂，也有许多官方和第三方文档与教程�
 # 用 # 字符开头的是单行注释
 
 """
-跨多行字符串会用三引号（即三
-个单引号或三个双引号）包裹，
-但也通常被用于注释
+跨多行字符串会用三引号
+（即三个单引号或三个双引号）
+包裹，但也通常被用于注释
 """
 ```
 
@@ -168,27 +144,9 @@ True
 10001.0
 ```
 
-在上面的实践中可以发现，除法运算（`/`）永远返回浮点类型（在 Python 2 中返回整数）。如果你想要整数或向下取整的结果的话，可以使用整数除法（`//`)。同样的，你也可以像 C++ 中一样，使用模（`%`）来计算余数，科学计数法的形式也相同。
+在上面的实践中可以发现，除法运算（`/`）永远返回浮点类型（在 Python 2 中返回整数）。如果你想要整数或向下取整的结果的话，可以使用整数除法（`//`）。同样的，你也可以像 C++ 中一样，使用模（`%`）来计算余数，科学计数法的形式也相同。
 
 特别地，Python 用 `**` 即可进行幂运算，还通过内置的 `pow(a, b, mod)` 提供了 [快速幂](../math/binary-exponentiation.md) 的高效实现。
-
-Python 的字符串类型包含 Unicode 字符，这意味着任何字符串都会存储为 Unicode。[^ref2]在 Python 中，可以对一个 Unicode 字符使用内置函数 `ord()` 将其转换为对应的 Unicode 编码，逆向的转换使用内置函数 `chr()`。
-
-如果想把数转换为对应的字符串，可使用 Python 内置函数 `str()`，也可以使用 f-string 实现；反之，可以使用 `int()` 和 `float()` 两个函数。
-
-Python 的字符串类型还有 [许多方便的功能](https://docs.python.org/zh-cn/3/library/stdtypes.html#text-sequence-type-str)。由于本文篇幅有限，这里不一一介绍。
-
-#### 数据类型判断
-
-对于一个变量，可以使用 `type(object)` 返回变量的类型，例如 `type(8)` 和 `type('a')` 的值分别为 `<class 'int'>` 和 `<class 'str'>`。
-
-### 输出和输入
-
-#### 输出
-
-对于一个变量，可以使用 `type(object)` 返回变量的类型，例如 `type(8)` 和 `type('a')` 的值分别为 `<class 'int'>` 和 `<class 'str'>`。
-
-Python 中，还可以使用 `**` 运算符和内置的 `pow(base, exp, mod=None)` 函数进行幂运算，使用 `abs(x)` 求数的绝对值。
 
 ```pycon
 >>> 3 ** 4 # 幂运算
@@ -202,9 +160,37 @@ Python 中，还可以使用 `**` 运算符和内置的 `pow(base, exp, mod=None
 False
 ```
 
+#### 数据类型判断
+
+对于一个变量，可以使用 `type(object)` 返回变量的类型，例如 `type(8)` 和 `type('a')` 的值分别为 `<class 'int'>` 和 `<class 'str'>`。
+
+#### [基本输入输出](https://docs.python.org/3/tutorial/inputoutput.html)
+
+Python 中的输入输出主要通过内置函数 `input()` 和 `print()` 完成，`print()` 的用法十分符合直觉：
+
+```pycon
+>>> a = [1,2,3]; print(a[-1])  # 打印时默认末尾换行
+3
+>>> print(ans[0], ans[1])  # 可以输出任意多个变量，默认以空格间隔
+1 2
+>>> print(a[0], a[1], end='')  # 令 end='', 使末尾不换行
+1 2>>>
+>>> print(a[0], a[1], sep=', ')  # 令 sep=', '，改变间隔样式
+1, 2
+>>> print(str(a[0]) + ', ' + str(a[1]))  # 输出同上，但是手动拼接成一整个字符串
+```
+
+`input()` 函数的行为接近 C++ 中的 `getline()`，即将一整行作为字符串读入，且末尾没有换行符。
+
+```pycon
+>>> s = input('请输入一串数字: '); s  # 自己调试时可以向 input() 传入字符串作为提示
+请输入一串数字: 1 2 3 4 5 6
+'1 2 3 4 5 6'
+```
+
 #### 字符串
 
-Python 3 提供了强大的基于 [Unicode](https://docs.python.org/zh-cn/3/howto/unicode.html#unicode-howto) 的字符串类型，使用起来和 C++ 中的 string 类似，一些概念如转义字符也都相通，除了加号拼接和索引访问，还额外支持数乘 `*` 重复字符串，和 `in` 操作符。
+Python 3 提供了强大的基于 [Unicode](https://docs.python.org/zh-cn/3/howto/unicode.html#unicode-howto) 的字符串类型，使用起来和 C++ 中的 `string` 类似，一些概念如转义字符也都相通，除了加号拼接和索引访问，还额外支持数乘 `*` 重复字符串，和 `in` 操作符。
 
 ```pycon
 >>> s1 = "O"  # 单引号和双引号都能包起字符串，有时可节省转义字符
@@ -249,7 +235,7 @@ Python 支持多种复合数据类型，可将不同值组合在一起。最常�
 'OI-Wiki 感谢你的阅读\n欢迎参与贡献!'
 ```
 
-C/C++ 中 `char` 类型可以和 对应的 ASCII 码互转，而在 Python 中你可以对一个 Unicode 字符使用内置函数 `ord()` 将其转换为对应的 Unicode 编码，逆向的转换使用内置函数 `chr()`。
+在最新的 Python 3 版本中，字符串是以 Unicode 编码的，也就是说，Python 的字符串支持多语言。[^ref2]在 Python 中，可以对一个 Unicode 字符使用内置函数 `ord()` 将其转换为对应的 Unicode 编码，逆向的转换使用内置函数 `chr()`。C/C++ 中 `char` 类型也可以和 对应的 ASCII 码互转。
 
 如果想把数字转换成对应的字符串，可以使用内置函数 `str()`，反之可以使用 `int()` 和 `float()`，你可以类比为 C/C++ 中的强制类型转换，但括号不是加在类型上而是作为函数的一部分括住参数。
 
@@ -261,7 +247,7 @@ Python 的字符串类型提供了许多强大的方法，包括计算某字符�
 
 #### 使用 `list`
 
-列表（`list`）大概是 Python 中最常用也最强大的序列类型，列表中可以存放任意类型的元素，包括嵌套的列表，这符合数据结构中「广义表」的定义。请注意不要将其与 C++ STL 中的双向链表 [`list`](https://oi-wiki.org/lang/csl/sequence-container/#list) 混淆，故本文将使用「列表」而非 `list` 以免造成误解。
+列表（`list`）大概是 Python 中最常用也最强大的序列类型，列表中可以存放任意类型的元素，包括嵌套的列表，这符合数据结构中「广义表」的定义。请注意不要将其与 C++ STL 中的双向链表 [`list`](./csl/sequence-container.md#list) 混淆，故本文将使用「列表」而非 `list` 以免造成误解。
 
 ```pycon
 >>> []  # 创建空列表，注意列表使用方括号
@@ -324,7 +310,7 @@ False
 >>> nums = list(range(65,70))  # 记得 range 外面还要套一层 list()
 [65, 66, 67, 68, 69]
 >>> lst = [chr(x) for x in nums]  # 列表推导式的典型结构，[exp for var in iterable if cond]
->>> lst  # 上两句可以合并成 [str(x) for x in range(65,70)]
+>>> lst  # 上两句可以合并成 [chr(x) for x in range(65,70)]
 ['A', 'B', 'C', 'D', 'E']
 >>> s = ''.join(lst); s # 用空字符串 '' 拼接列表中的元素生成新字符串
 'ABCDE'
@@ -353,7 +339,7 @@ False
 [0, 0, 0]
 >>> id(a1) == id(a2) and id(a1) != id(a3)  # 内置函数 id() 给出对象的「标识值」，可类比为地址，地址相同说明是一个对象
 True
->>> vis2 = vis[:];  # 拷贝一份二维列表看看
+>>> vis2 = vis[:]  # 拷贝一份二维列表看看
 >>> vis[0][1] = 2; vis  # vis 肯定还是被批量修改
 >>> [[1, 2, 0], [1, 2, 0], [1, 2, 0]]
 >>> vis2  # 但 vis2 是切片拷贝的怎么还是被改了
@@ -361,7 +347,7 @@ True
 >>> id(vis) != id(vis2)  # vis 和 vis2 确实不是一个对象啊
 True
 >>> # 谜底揭晓，vis2 虽然不是 vis 的引用，但其中对应行都指向相同的对象
->>> [[id(vis[i]) == id(vis2[i]) for i in range(3)]
+>>> [id(vis[i]) == id(vis2[i]) for i in range(3)]
 [True, True, True]
 >>> # 回看二维列表自身
 >>> [id(x) for x in vis]  # 具体数字和这里不一样但三个值一定相同，说明是三个相同对象
@@ -409,7 +395,7 @@ array([[0., 0., 0.],
 array([[1, 0],
        [0, 0]])
 
->>> a1[0, 2] # 获取第 1、3 列，无拷贝
+>>> a1[:, [0, 2]] # 获取第 1、3 列，无拷贝
 array([[1, 0],
        [0, 0],
        [0, 0]])
@@ -433,21 +419,11 @@ array([[0, 0, 1],
 
 ### [输入输出](https://docs.python.org/3/tutorial/inputoutput.html)
 
-Python 中的输入输出主要通过内置函数 `input()` 和 `print()` 完成，`print()` 的用法十分符合直觉：
+Python 中的输入输出主要通过内置函数 `input()` 和 `print()` 完成。前文已经介绍过，下面介绍进阶用法。
 
-```pycon
->>> a = [1,2,3]; print(a[-1])  # 打印时默认末尾换行
-3
->>> print(ans[0], ans[1])  # 可以输出任意多个变量，默认以空格间隔
-1 2
->>> print(a[0], a[1], end='')  # 令 end='', 使末尾不换行
-1 2>>>
->>> print(a[0], a[1], sep=', ')  # 令 sep=', '，改变间隔样式
-1, 2
->>> print(str(a[0]) + ', ' + str(a[1]))  # 输出同上，但是手动拼接成一整个字符串
-```
+#### 格式化输出
 
-算法竞赛中通常只涉及到基本的数值和字符串输出，以上用法基本足够，只有当涉及到浮点数位数时需要用到格式化字符串输出。格式化有三种方法，第一种也是最老旧的方法是使用 `printf()` 风格的 `%` 操作符；另一种是利用 [`format` 函数](https://docs.python.org/3/library/string.html#formatstrings)，写起来比较长；第三种是 Python 3.6 新增的 [f-string](https://docs.python.org/zh-cn/3/tutorial/inputoutput.html#formatted-string-literals)，最为简洁，但不保证考场中的 Python 版本足够新。详细丰富的说明可以参考 [这个网页](https://www.python-course.eu/python3_formatted_output.php)，尽管更推荐使用 `format()` 方法，但为了获得与 C 接近的体验，下面仅演示与 `printf()` 类似的老式方法：
+算法竞赛中通常只涉及到基本的数值和字符串输出，`print()` 已基本足够，只有当涉及到浮点数位数时需要用到格式化字符串输出。格式化有三种方法，第一种也是最老旧的方法是使用 `printf()` 风格的 `%` 操作符；另一种是利用 [`format` 函数](https://docs.python.org/3/library/string.html#formatstrings)，写起来比较长；第三种是 Python 3.6 新增的 [f-string](https://docs.python.org/zh-cn/3/tutorial/inputoutput.html#formatted-string-literals)，最为简洁，但不保证考场中的 Python 版本足够新。详细丰富的说明可以参考 [这个网页](https://www.python-course.eu/python3_formatted_output.php)，尽管更推荐使用 `format()` 方法，但为了获得与 C 接近的体验，下面仅演示与 `printf()` 类似的老式方法：
 
 ```pycon
 >>> pi = 3.1415926; print('%.4f' % pi)   # 格式为 %[flags][width][.precision]type
@@ -455,6 +431,8 @@ Python 中的输入输出主要通过内置函数 `input()` 和 `print()` 完成
 >>> '%.4f - %8f = %d' % (pi, 0.1416, 3)  # 右边多个参数用 () 括住，后面会看到其实是「元组」 
 '3.1416 - 0.141600 = 3'
 ```
+
+#### `split()` 函数
 
 `input()` 函数的行为接近 C++ 中的 `getline()`，即将一整行作为字符串读入，且末尾没有换行符，但在算法竞赛中，常见的输入形式是一行输入多个数值，因此就需要使用字符串的 `split()` 方法并搭配列表推导式得到存放数值类型的列表，下面以输入 n 个数求平均值为例演示输入 n 个数得到「数组」的方法：
 
@@ -519,39 +497,38 @@ for i in range(4):  # 这里假设输入 4 行数据
 print(u, v, w)
 ```
 
-需要注意，Python 中的 for 循环和 C/C++ 有较大的差别，其作用类似 C++ 11 引入的 [「基于范围的循环」](https://oi-wiki.org/lang/new/#for)，实质是迭代序列中的元素，比如编写循环遍历数组下标需要迭代 `range(len(lst))`，而非真正定义起始和终止条件，所以使用起来并没有 C/C++ 灵活。
+需要注意，Python 中的 for 循环和 C/C++ 有较大的差别，其作用类似 C++ 11 引入的 [「基于范围的循环」](./new.md#基于范围的-for-循环)，实质是迭代序列中的元素，比如编写循环遍历数组下标需要迭代 `range(len(lst))`，而非真正定义起始和终止条件，所以使用起来并没有 C/C++ 灵活。
 
 下面再用 while 循环展示行数不定的情况下如何输入：
 
 ```python
 u, v, w = [], [], []  # 多变量赋值，其实同上
 s = input()  # 注意 Python 中赋值语句不能放在条件表达式中
-while s:  # 不能像 C 那样 while(!scanf()) 
+while s:  # 不能像 C 那样 while(!scanf())
     # 用切片拼接避免了 append()，注意列表推导式中又嵌套了列表
-    u[len(u):], v[len(v):], w[len(w):] = [[int(x)] for x in s.split()]
+    u[len(u) :], v[len(v) :], w[len(w) :] = [[int(x)] for x in s.split()]
     s = input()
 # Python 3.8 引入了 walrus operator 海象运算符后，你可以节省两行，但考场环境很可能不支持
 while s := input():
-    u[len(u):], v[len(v):], w[len(w):] = [[int(x)] for x in s.split()]
+    u[len(u) :], v[len(v) :], w[len(w) :] = [[int(x)] for x in s.split()]
 print(u, v, w)
 ```
 
 #### 选择结构
 
-和 C/C++ 大同小异，一些形式上的差别都在下面的示例中有所展示，此外还需注意条件表达式中不允许使用赋值运算符（Python 3.8 以上可用 [`:=`](https://www.python.org/dev/peps/pep-0572/)），以及 [没有 swicth 语句](https://docs.python.org/zh-cn/3/faq/design.html#why-isn-t-there-a-switch-or-case-statement-in-python)。
+和 C/C++ 大同小异，一些形式上的差别都在下面的示例中有所展示，此外还需注意条件表达式中不允许使用赋值运算符（Python 3.8 以上可用 [`:=`](https://www.python.org/dev/peps/pep-0572/)），以及 [没有 switch 语句](https://docs.python.org/zh-cn/3/faq/design.html#why-isn-t-there-a-switch-or-case-statement-in-python)。
 
 ```python
 # 条件表达式两侧无括号
 if 4 >= 3 > 2 and 3 != 5 == 5 != 7:
     print("关系运算符可以连续使用")
     x = None or [] or -2
-    print("&&  ||  !", "与  或  非", "and or not", sep='\n')
+    print("&&  ||  !", "与  或  非", "and or not", sep="\n")
     print("善用 and/or 可节省行数")
     if not x:
         print("负数也是 True，不执行本句")
     elif x & 1:
-        print("用 elif 而不是 else if\n"
-        "位运算符与 C 相近，偶数&1 得 0，不执行本句")
+        print("用 elif 而不是 else if\n" "位运算符与 C 相近，偶数&1 得 0，不执行本句")
     else:
         print("也有三目运算符") if x else print("注意结构")
 ```
@@ -582,12 +559,12 @@ Python 内置函数 [`open()`](https://docs.python.org/3/library/functions.html#
 
 ```python
 a = []
-with open('in.txt') as f:
+with open("in.txt") as f:
     N = int(f.readline())  # 读入第一行的 N
-    a[len(a):] = [[int(x) for x in f.readline().split()] for i in range(N)]
+    a[len(a) :] = [[int(x) for x in f.readline().split()] for i in range(N)]
 
-with open('out.txt', 'w') as f:
-    f.write('1\n')
+with open("out.txt", "w") as f:
+    f.write("1\n")
 ```
 
 关于文件读写的函数有很多，分别适用于不同的场景，由于 OI 赛事尚不支持使用 Python，这里从略。
@@ -599,8 +576,8 @@ Python 内置了许多强大的容器类型，只有熟练使用并了解其特�
 元组可以简单理解成不可变的列表，不过还需注意「不可变」的内涵，如果元组中的某元素是可变类型比如列表，那么仍可以修改该列表的值，元组中存放的是对列表的引用所以元组本身并没有改变。元组的优点是开销较小且「[可哈希](https://docs.python.org/zh-cn/3/glossary.html)」，后者在创建字典和集合时非常有用。
 
 ```python
-tup = tuple([[1,2], 4])  # 由列表得到元组
-# 等同于 tup = （[1,2], 4)
+tup = tuple([[1, 2], 4])  # 由列表得到元组
+# 等同于 tup = ([1,2], 4)
 tup[0].append(3)
 print(tup)
 a, b = 0, "I-Wiki"  # 多变量赋值其实是元组拆包
@@ -610,24 +587,26 @@ print(id(a), id(b))  # 你应该会看到 a, b 的 id 值现在互换了
 # 这更说明 Python 中，变量更像是名字，赋值只是让其指代对象
 ```
 
-字典就像 C++ STL 中的 [`map`](https://oi-wiki.org/lang/csl/associative-container/#map)（请注意和 Python 中内置函数 [`map()`](https://docs.python.org/zh-cn/3/library/functions.html#map) 区分）用于存储键值对，形式类似 [JSON](https://docs.python.org/3/library/json.html)，但 JSON 中键必须是字符串且以双引号括住，字典则更加灵活强大，可哈希的对象都可作为字典的键。需要注意 Python 几次版本更新后字典的特性有了较多变化，包括其中元素的顺序等，请自行探索。
+字典就像 C++ STL 中的 [`map`](./csl/associative-container.md#map)（请注意和 Python 中内置函数 [`map()`](https://docs.python.org/zh-cn/3/library/functions.html#map) 区分）用于存储键值对，形式类似 [JSON](https://docs.python.org/3/library/json.html)，但 JSON 中键必须是字符串且以双引号括住，字典则更加灵活强大，可哈希的对象都可作为字典的键。需要注意 Python 几次版本更新后字典的特性有了较多变化，包括其中元素的顺序等，请自行探索。
 
 ```python
-dic = {'key': "value"}  # 基本形式
+dic = {"key": "value"}  # 基本形式
 dic = {chr(i): i for i in range(65, 91)}  # 大写字母到对应 ASCII 码的映射，注意断句
-dic = dict(zip([chr(i) for i in range(65, 91)], range(65,91)))  # 效果同上
+dic = dict(zip([chr(i) for i in range(65, 91)], range(65, 91)))  # 效果同上
 dic = {dic[k]: k for k in dic}  # 将键值对逆转，for k in dic 迭代其键
 dic = {v: k for k, v in dic.items()}  # 和上行作用相同，dic.items() 以元组存放单个键值对
-dic = {k: v for k, v in sorted(dic.items(), key=lambda x:-x[1])}  # 字典按值逆排序，用到了 lambda 表达式
+dic = {
+    k: v for k, v in sorted(dic.items(), key=lambda x: -x[1])
+}  # 字典按值逆排序，用到了 lambda 表达式
 
-print(dic['A'])  # 返回 dic 中 以 'A' 为键的项，这里值为65
-dic['a'] = 97  # 将 d[key] 设为 value，字典中原无 key 就是直接插入
-if 'b' in dic:  # LBYL(Look Before You Leap) 风格
-    print(dic['b'])  # 若字典中无该键则会出错，故先检查
+print(dic["A"])  # 返回 dic 中 以 'A' 为键的项，这里值为65
+dic["a"] = 97  # 将 d[key] 设为 value，字典中原无 key 就是直接插入
+if "b" in dic:  # LBYL(Look Before You Leap) 风格
+    print(dic["b"])  # 若字典中无该键则会出错，故先检查
 else:
-    dic['b'] = 98
+    dic["b"] = 98
 
-# 经典场景 统计出现次数 
+# 经典场景 统计出现次数
 # 新键不存在于原字典，需要额外处理
 try:  # EAFP (Easier to Ask for Forgiveness than Permission) 风格
     cnter[key] += 1
@@ -635,7 +614,7 @@ except KeyError:
     cnter[key] = 1
 ```
 
-集合就像 C++ STL 中的*[`set`](https://oi-wiki.org/lang/csl/associative-container/#set)*，不会保存重复的元素，可以看成只保存键的字典。需要注意集合和字典都用 `{}` 括住，不过单用 `{}` 会创建空字典而不是空集合，这里就不再给出示例。
+集合就像 C++ STL 中的 [`set`](./csl/associative-container.md#set)，不会保存重复的元素，可以看成只保存键的字典。需要注意集合和字典都用 `{}` 括住，不过单用 `{}` 会创建空字典而不是空集合，这里就不再给出示例。
 
 ### 编写函数
 
@@ -647,18 +626,19 @@ def add(a, b):
 
 
 def add_no_swap(a, b):
-    print('in func #1:', id(a), id(b))
+    print("in func #1:", id(a), id(b))
     a += b
     b, a = a, b
-    print('in func #2:', id(a), id(b))  # a, b 已交换
+    print("in func #2:", id(a), id(b))  # a, b 已交换
     return a, b  # 返回多个值，其实就是返回元组，可以拆包接收
 
 
-lst1 = [1, 2]; lst2 = [3, 4]
-print('outside func #1:', id(lst1), id(lst2))
+lst1 = [1, 2]
+lst2 = [3, 4]
+print("outside func #1:", id(lst1), id(lst2))
 add_no_swap(lst1, lst2)
 # 函数外 lst1, lst2 并未交换
-print('outside func #2:', id(lst1), id(lst2))
+print("outside func #2:", id(lst1), id(lst2))
 # 不过值确实已经改变
 print(lst1, lst2)
 ```
@@ -672,12 +652,14 @@ def append_to(element, to=[]):
     to.append(element)
     return to
 
+
 lst1 = append_to(12)
 lst2 = append_to(42)
 print(lst1, lst2)
 
 # 你可能以为输出是 [12] [42]
 # 但运行结果其实是 [12] [12, 42]
+
 
 # 这是因为默认参数的值仅仅在函数定义的时候赋值一次
 # 默认参数的值应该是不可变对象，使用 None 占位是一种最佳实践
@@ -708,13 +690,14 @@ Python 3.5 后引入了类型标注，允许设置函数参数和返回值的类
 
 ```python
 def headline(
-    text,           # type: str
-    width = 80,       # type: int
-    fill_char = "-",  # type: str
-):                  # type: (...) -> str
+    text,  # type: str
+    width=80,  # type: int
+    fill_char="-",  # type: str
+):  # type: (...) -> str
     return f"{text.title()}".center(width, fill_char)
 
-print(headline("type comments work", width = 40))
+
+print(headline("type comments work", width=40))
 ```
 
 除了函数参数，变量也是可以类型标注的，你可以通过调用 `__annotations__` 来查看函数中所有的类型标注。变量类型标注赋予了 Python 静态语言的性质，即声明与赋值分离：
@@ -736,14 +719,14 @@ NameError: name 'nothing' is not defined
 
 `@lru_cache(maxsize=128,typed=False)`
 
-- 传入的参数有 2 个：`maxsize` 和 `typed`，如果不传则 `maxsize` 的默认值为 128，`typed` 的默认值为 `False`。
-- 其中 `maxsize` 参数表示的是 LRU 缓存的容量，即被装饰的方法的最大可缓存结果的数量。如果该参数值为 128，则表示被装饰方法最多可缓存 128 个返回结果；如果 `maxsize` 传入为 `None` 则表示可以缓存无限个结果。
-- 如果 `typed` 设置为 `True`，不同类型的函数参数将被分别缓存，例如，`f(3)` 和 `f(3.0)` 会缓存两次。
+-   传入的参数有 2 个：`maxsize` 和 `typed`，如果不传则 `maxsize` 的默认值为 128，`typed` 的默认值为 `False`。
+-   其中 `maxsize` 参数表示的是 LRU 缓存的容量，即被装饰的方法的最大可缓存结果的数量。如果该参数值为 128，则表示被装饰方法最多可缓存 128 个返回结果；如果 `maxsize` 传入为 `None` 则表示可以缓存无限个结果。
+-   如果 `typed` 设置为 `True`，不同类型的函数参数将被分别缓存，例如，`f(3)` 和 `f(3.0)` 会缓存两次。
 
 以下是使用 `lru_cache` 优化计算斐波那契数列的例子：
 
 ```python
-@lru_cache(maxsize = None)
+@lru_cache(maxsize=None)
 def fib(n):
     if n < 2:
         return n
@@ -773,67 +756,68 @@ def fib(n):
 
 ## 从例题对比 C++ 与 Python
 
-??? note "[例题 洛谷 P4779 【模板】单源最短路径（标准版）](https://www.luogu.com.cn/problem/P4779)"
+??? note "[例题 洛谷 P4779【模板】单源最短路径（标准版）](https://www.luogu.com.cn/problem/P4779)"
     给定一个 $n(1 \leq n \leq 10^5)$ 个点、$m(1 \leq m \leq 2\times 10^5)$ 条有向边的带非负权图，请你计算从 $s$ 出发，到每个点的距离。数据保证能从 $s$ 出发到任意点。
 
 ### 声明常量
 
 === "C++"
-
     ```cpp
-    #include <bits/stdc++.h>
+    #include <cstdio>
+    #include <cstring>
+    #include <queue>
+    #include <vector>
     using namespace std;
-    const int N = 1e5 + 5, M = 2e5 + 5;
+    constexpr int N = 1e5 + 5, M = 2e5 + 5;
     ```
 
 === "Python"
-
     ```python
-    try: # 引入优先队列模块
-        import Queue as pq #python version < 3.0
+    try:  # 引入优先队列模块
+        import Queue as pq  # python version < 3.0
     except ImportError:
-        import queue as pq #python3.*
-
+        import queue as pq  # python3.*
+    
     N = int(1e5 + 5)
     M = int(2e5 + 5)
-    INF = 0x3f3f3f3f
+    INF = 0x3F3F3F3F
     ```
 
 ### 声明前向星结构体和其它变量
 
 === "C++"
-
     ```cpp
     struct qxx {
       int nex, t, v;
     };
-
+    
     qxx e[M];
     int h[N], cnt;
-
-    void add_path(int f, int t, int v) { e[++cnt] = (qxx){h[f], t, v}, h[f] = cnt; }
-
-    typedef pair<int, int> pii;
+    
+    void add_path(int f, int t, int v) { e[++cnt] = qxx{h[f], t, v}, h[f] = cnt; }
+    
+    using pii = pair<int, int>;
     priority_queue<pii, vector<pii>, greater<pii>> q;
     int dist[N];
     ```
 
 === "Python"
-
     ```python
     class qxx:  # 前向星类（结构体）
         def __init__(self):
             self.nex = 0
             self.t = 0
             self.v = 0
-
+    
+    
     e = [qxx() for i in range(M)]  # 链表
     h = [0 for i in range(N)]
     cnt = 0
-
+    
     dist = [INF for i in range(N)]
     q = pq.PriorityQueue()  # 定义优先队列，默认第一元小根堆
-
+    
+    
     def add_path(f, t, v):  # 在前向星中加边
         # 如果要修改全局变量，要使用 global 来声明
         global cnt, e, h
@@ -849,7 +833,6 @@ def fib(n):
 ### Dijkstra 算法
 
 === "C++"
-
     ```cpp
     void dijkstra(int s) {
       memset(dist, 0x3f, sizeof(dist));
@@ -869,15 +852,14 @@ def fib(n):
     ```
 
 === "Python"
-
     ```python
     def nextedgeid(u):  # 生成器，可以用在 for 循环里
         i = h[u]
         while i:
             yield i
             i = e[i].nex
-
-
+    
+    
     def dijkstra(s):
         dist[s] = 0
         q.put((0, s))
@@ -888,19 +870,18 @@ def fib(n):
             for i in nextedgeid(u[1]):
                 v = e[i].t
                 w = e[i].v
-                if dist[v] <= dist[u[1]]+w:
+                if dist[v] <= dist[u[1]] + w:
                     continue
-                dist[v] = dist[u[1]]+w
+                dist[v] = dist[u[1]] + w
                 q.put((dist[v], v))
     ```
 
 ### 主函数
 
 === "C++"
-
     ```cpp
     int n, m, s;
-
+    
     int main() {
       scanf("%d%d%d", &n, &m, &s);
       for (int i = 1; i <= m; i++) {
@@ -915,45 +896,46 @@ def fib(n):
     ```
 
 === "Python"
-
     ```python
-    if __name__ == '__main__':
+    if __name__ == "__main__":
         # 一行读入多个整数。注意它会把整行都读进来
         n, m, s = map(int, input().split())
         for i in range(m):
             u, v, w = map(int, input().split())
             add_path(u, v, w)
-
+    
         dijkstra(s)
-
+    
         for i in range(1, n + 1):
-            print(dist[i], end = ' ')
-
+            print(dist[i], end=" ")
+    
         print()
     ```
 
 ### 完整代码
 
 === "C++"
-
     ```cpp
-    #include <bits/stdc++.h>
+    #include <cstdio>
+    #include <cstring>
+    #include <queue>
+    #include <vector>
     using namespace std;
-    const int N = 1e5 + 5, M = 2e5 + 5;
-
+    constexpr int N = 1e5 + 5, M = 2e5 + 5;
+    
     struct qxx {
       int nex, t, v;
     };
-
+    
     qxx e[M];
     int h[N], cnt;
-
-    void add_path(int f, int t, int v) { e[++cnt] = (qxx){h[f], t, v}, h[f] = cnt; }
-
-    typedef pair<int, int> pii;
+    
+    void add_path(int f, int t, int v) { e[++cnt] = qxx{h[f], t, v}, h[f] = cnt; }
+    
+    using pii = pair<int, int>;
     priority_queue<pii, vector<pii>, greater<pii>> q;
     int dist[N];
-
+    
     void dijkstra(int s) {
       memset(dist, 0x3f, sizeof(dist));
       dist[s] = 0, q.push(make_pair(0, s));
@@ -969,9 +951,9 @@ def fib(n):
         }
       }
     }
-
+    
     int n, m, s;
-
+    
     int main() {
       scanf("%d%d%d", &n, &m, &s);
       for (int i = 1; i <= m; i++) {
@@ -986,30 +968,32 @@ def fib(n):
     ```
 
 === "Python"
-
     ```python
     try:  # 引入优先队列模块
         import Queue as pq  # python version < 3.0
     except ImportError:
         import queue as pq  # python3.*
-
-    N = int(1e5+5)
-    M = int(2e5+5)
-    INF = 0x3f3f3f3f
-
+    
+    N = int(1e5 + 5)
+    M = int(2e5 + 5)
+    INF = 0x3F3F3F3F
+    
+    
     class qxx:  # 前向星类（结构体）
         def __init__(self):
             self.nex = 0
             self.t = 0
             self.v = 0
-
+    
+    
     e = [qxx() for i in range(M)]  # 链表
     h = [0 for i in range(N)]
     cnt = 0
-
+    
     dist = [INF for i in range(N)]
     q = pq.PriorityQueue()  # 定义优先队列，默认第一元小根堆
-
+    
+    
     def add_path(f, t, v):  # 在前向星中加边
         # 如果要修改全局变量，要使用 global 来声名
         global cnt, e, h
@@ -1020,13 +1004,15 @@ def fib(n):
         e[cnt].t = t
         e[cnt].v = v
         h[f] = cnt
-
+    
+    
     def nextedgeid(u):  # 生成器，可以用在 for 循环里
         i = h[u]
         while i:
             yield i
             i = e[i].nex
-
+    
+    
     def dijkstra(s):
         dist[s] = 0
         q.put((0, s))
@@ -1037,38 +1023,38 @@ def fib(n):
             for i in nextedgeid(u[1]):
                 v = e[i].t
                 w = e[i].v
-                if dist[v] <= dist[u[1]]+w:
+                if dist[v] <= dist[u[1]] + w:
                     continue
-                dist[v] = dist[u[1]]+w
+                dist[v] = dist[u[1]] + w
                 q.put((dist[v], v))
-
-
+    
+    
     # 如果你直接运行这个python代码（不是模块调用什么的）就执行命令
-    if __name__ == '__main__':
+    if __name__ == "__main__":
         # 一行读入多个整数。注意它会把整行都读进来
         n, m, s = map(int, input().split())
         for i in range(m):
             u, v, w = map(int, input().split())
             add_path(u, v, w)
-
+    
         dijkstra(s)
-
+    
         for i in range(1, n + 1):
             # 两种输出语法都是可以用的
-            print("{}".format(dist[i]), end=' ')
+            print("{}".format(dist[i]), end=" ")
             # print("%d" % dist[i],end=' ')
-
+    
         print()  # 结尾换行
     ```
 
 ## 参考文档
 
-1. Python Documentation，<https://www.python.org/doc/>
-2. Python 官方中文教程，<https://docs.python.org/zh-cn/3/tutorial/>
-3. Learn Python3 In Y Minutes，<https://learnxinyminutes.com/docs/python3/>
-4. Real Python Tutorials，<https://realpython.com/>
-5. 廖雪峰的 Python 教程，<https://www.liaoxuefeng.com/wiki/1016959663602400/>
-6. GeeksforGeeks: Python Tutorials,<https://www.geeksforgeeks.org/python-programming-language/>
+1.  Python Documentation，<https://www.python.org/doc/>
+2.  Python 官方中文教程，<https://docs.python.org/zh-cn/3/tutorial/>
+3.  Learn Python3 In Y Minutes，<https://learnxinyminutes.com/docs/python3/>
+4.  Real Python Tutorials，<https://realpython.com/>
+5.  廖雪峰的 Python 教程，<https://www.liaoxuefeng.com/wiki/1016959663602400/>
+6.  GeeksforGeeks: Python Tutorials,<https://www.geeksforgeeks.org/python-programming-language/>
 
 ## 参考资料和注释
 
